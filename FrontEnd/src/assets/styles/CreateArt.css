@@ -1,0 +1,36 @@
+/* Default (disconnected) style for the ConnectButton */
+.my-connect-button {
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.wkit-connected-button {
+
+  width: auto; /* Allow the width to adjust based on content */
+
+  overflow: hidden; /* Hide any overflow content */
+  white-space: nowrap; /* Prevent text from wrapping */
+    text-align: center; /* Center the text */
+
+}
+
+/* Hover style */
+.my-connect-button:hover {
+  background-color: #333;
+}
+
+/* Connected style override */
+.my-connect-button.connected {
+  background-color: transparent;
+  color: #fff;
+}
+
+.container { /* Add this class to the button's parent container */
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically, if needed */
+}

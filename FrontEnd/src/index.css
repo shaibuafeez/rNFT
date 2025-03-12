@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  height: 100%;
+}
+
+.bg-\[\#FCFBF2\] {
+  --tw-bg-opacity: 1;
+  background-color: #fcfbf2;
+  background-color: rgb(252 251 242 / var(--tw-bg-opacity, 1));
+  min-height: -webkit-fill-available;
+}
