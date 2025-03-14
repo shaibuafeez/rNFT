@@ -19,6 +19,8 @@ Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-fram
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
+# Set the module address to 0x0 for publishing
+# This will be replaced with the actual address during publishing
 rnfts = "0x0"
 
 # Named addresses will be accessible in Move as `@name`. They're also exported:

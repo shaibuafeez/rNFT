@@ -1,4 +1,4 @@
-import { PACKAGE_ID, REGISTRY } from '../config/constants';
+import { PACKAGE_ID, REGISTRY, NETWORK } from '../config/constants';
 import { useWallet } from '@suiet/wallet-kit';
 import { TransactionBlock } from '@mysten/sui.js/transactions';
 
@@ -19,12 +19,13 @@ export function useMintNFT() {
             console.log("Starting transaction creation");
             console.log("Package ID:", PACKAGE_ID);
             console.log("Registry:", REGISTRY);
+            console.log("Network:", NETWORK);
             
             // Create a new transaction block using the Sui SDK
             const tx = new TransactionBlock();
             
-            // Get the current network from the wallet
-            const network = wallet.chain?.name || 'devnet';
+            // Get the current network from the wallet or use the configured network
+            const network = wallet.chain?.name || NETWORK;
             console.log("Current network:", network);
             
             // Define the Random object properly as a shared object
@@ -41,7 +42,7 @@ export function useMintNFT() {
             });
             
             // Set gas budget
-            tx.setGasBudget(10000000000); // 10 SUI for higher gas budget
+            tx.setGasBudget(1000000000); // 1 SUI for gas budget (typical transaction uses 0.7-0.8 SUI)
             
             console.log("Executing transaction...");
             console.log("Transaction details:", tx);

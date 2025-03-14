@@ -29,6 +29,29 @@ This project allows users to create unique, algorithmically generated NFT art ba
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## Switching Between Networks
+
+The application is configured to work with both devnet and mainnet. To switch between networks:
+
+1. Update the `NETWORK` constant in `FrontEnd/src/config/constants.js`:
+   ```javascript
+   // Set to 'mainnet' for production or 'devnet' for testing
+   export const NETWORK = 'mainnet'; 
+   ```
+
+2. Update the contract details in the same file with the appropriate Package ID and Registry ID for the selected network:
+   ```javascript
+   // Replace with your network-specific values
+   export const PACKAGE_ID = '0x...'; 
+   export const REGISTRY = '0x...';
+   ```
+
+3. If you're deploying to mainnet, make sure to publish your contract using:
+   ```
+   sui client switch --env mainnet
+   sui client publish --gas-budget 100000000 ./Contract
+   ```
+
 ## Minting an NFT
 
 1. Connect your Sui wallet using the "Connect Wallet" button
@@ -46,9 +69,9 @@ This project allows users to create unique, algorithmically generated NFT art ba
 
 ## Contract Deployment
 
-The contract has been deployed to the Sui devnet with the following details:
-- Package ID: `0xa6225c6b13a2190832c0afd29421dd6accd95f785529cb1030625f8e45153ee7`
-- Registry: `0x55cfb1a9785c4e799ecc76c2d1afae8ac90d000dccf2e56931b4ba87975665c6`
+The contract has been deployed to the Sui mainnet with the following details:
+- Package ID: `0xc6ea8188930e251f1e8b239d7530aba6577a4a8a4c5f17eff8ed288eb7d463fb`
+- Registry: `0x25371cd529b8a939d357f3c3dc582bf8826bbbc1c192ca5dbfa8b625352448d5`
 
 ## Frontend Integration
 

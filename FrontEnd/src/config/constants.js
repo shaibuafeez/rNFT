@@ -1,2 +1,6 @@
-export const PACKAGE_ID = '0xa6225c6b13a2190832c0afd29421dd6accd95f785529cb1030625f8e45153ee7';
-export const REGISTRY = '0x55cfb1a9785c4e799ecc76c2d1afae8ac90d000dccf2e56931b4ba87975665c6';
+// Mainnet contract details
+export const PACKAGE_ID = '0xc6ea8188930e251f1e8b239d7530aba6577a4a8a4c5f17eff8ed288eb7d463fb'; // Mainnet package ID
+export const REGISTRY = '0x25371cd529b8a939d357f3c3dc582bf8826bbbc1c192ca5dbfa8b625352448d5'; // Mainnet registry ID
+
+// Network configuration
+export const NETWORK = 'mainnet'; // Set to 'mainnet' for production, 'devnet' for testing

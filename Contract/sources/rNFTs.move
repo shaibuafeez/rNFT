@@ -1,5 +1,5 @@
-#[allow(duplicate_alias)]
-module rnfts::main {
+#[allow(duplicate_alias, unused_function)]
+module 0x0::main {
 
 use std::string::{Self, String};
 use sui::bcs;
@@ -954,11 +954,9 @@ fun generate_optimized_svg(colors: &vector<String>, grid_size: u64): vector<u8> 
 }
 
 /**
-* Encodes a byte vector into a base64 string
-* Used for encoding SVG data
-* @param bytes - the bytes to encode
-* @return String - The base64 encoded string
+* Base64 encoding function for SVG data URIs (unused but kept for reference)
 */
+#[allow(unused_function)]
 #[allow(implicit_const_copy)]
 fun encode_8(mut bytes: vector<u8>): String {
     let keys = &KEYS;
